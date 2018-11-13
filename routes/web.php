@@ -37,3 +37,6 @@ Route::get('/services', 'PagesController@services');
 
 Route::resource('posts', 'PostsController');
 
+Route::get('/home', function () {
+    return view('pages.home');
+});
