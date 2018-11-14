@@ -30,27 +30,22 @@ Route::get('/login/{name}', function ($n) {
     return "user is:".$n;
 });
 */
-Route::get('/', 'PagesController@index');
+Route::get('/', 'LandsController@index');
 Route::get('/index', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
 
-Route::resource('posts', 'PostsController');
+//Route::resource('posts', 'PostsController');
 
-Route::get('/home', function () {
-    return view('pages.home');
-});
+//Route::resource('provinces','ProvincesController');
 
+//Route::resource('districts','DistrictsController');
 
-Route::resource('provinces','ProvincesController');
+//Route::resource('cities','CitiesController');
 
-Route::resource('districts','DistrictsController');
+//Route::resource('lands','LandsController');
 
-Route::resource('cities','CitiesController');
+//Route::resource('landParts','landPartsController');
 
-Route::resource('lands','LandsController');
-
-Route::resource('landParts','landPartsController');
-
-Route::resource('users','UsersController');
+//Route::resource('users','UsersController');
 

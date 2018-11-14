@@ -8,7 +8,7 @@
         <a class="btn btn-success btn-lg" href="#" role="button">Register</a></p>
     </div>-->
 
-    <div class="container col-sm-12 col-md-12 col-lg-12" " style="margin-left:0px">
+    <div class="">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
         
           <!-- Wrapper for slides -->
@@ -60,5 +60,41 @@
         </div><!-- End Carousel -->
     </div>
 
+    @if(count($lands)>0)
+        @foreach ($lands as $land)
+        <div class="container" style="margin-top:10px">
+            <div class="well">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                      <img class="media-object" src="{{asset('images/land_images/'.(string)$land->land_id.'.jpg')}}">
+                    </a>
+                    <div class="media-body">
+                      <h3 class="media-heading"><a href="">{{$land->land_name}} - {{$land->land_city}}</a></h3>
+                      <medium>Address : {{$land->land_address}}</medium><br>
+                      <medium>Land area : {{$land->land_area}}</medium><br>
+                      <medium>Description : {{$land->land_description}}</medium>
+                    <ul class="list-inline list-unstyled">
+                        <li>
+                            <p>Ratings:</p>
+                        </li>
+                        <li>
+                         <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star"></span>
+                                  <span class="glyphicon glyphicon-star-empty"></span>
+                        </li>
+                        </ul>
+                 </div>
+              </div>
+            </div>
+        </div>
+        @endforeach
+    @else
+        <p>No Lands Found</p>
+    @endif
+
+    
+        
 
 @endsection    

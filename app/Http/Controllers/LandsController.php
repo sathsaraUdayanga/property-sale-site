@@ -14,7 +14,9 @@ class LandsController extends Controller
      */
     public function index()
     {
-        //
+        $lands = Land::orderBy('land_id','desc')->get();
+        return view('pages/index')->with('lands',$lands);
+        //return view('pages/index');
     }
 
     /**
