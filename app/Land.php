@@ -17,34 +17,35 @@ class Land extends Model
             'land_district_id',
             'land_city_id',
             'land_city',
+            'land_discription',
             'land_area'
       ];
 
-      
+
     public function province(){
 
         return $this->belongsTo('App\Province','province_id');
-     
+
         }
 
-    
+
     public function district(){
 
         return $this->belongsTo('App\District','district_id');
-         
+
         }
 
-    
+
     public function city(){
 
         return $this->belongsTo('App\City','city_id');
-             
+
         }
 
     public function land_parts(){
 
         return $this->hasMany('App\LandPart','land_part_id');
-            
+
         }
-  
+
 }
