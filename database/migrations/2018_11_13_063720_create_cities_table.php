@@ -28,7 +28,7 @@ class CreateCitiesTable extends Migration
             $table->timestamps();
 
             $table->foreign('city_province_id')->references('province_id')->on('provinces');
-            $table->foreign('city_district_id')->references('district_id')->on('districks');
+            $table->foreign('city_district_id')->references('district_id')->on('districts');
 
            
         });

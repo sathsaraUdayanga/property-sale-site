@@ -17,7 +17,7 @@ class CreateLandPartsTable extends Migration
             $table->increments('land_parts_id');
             $table->float('land_parts_area',8,2);
             $table->float('land_parts_price',8,2);
-            $table->bolean('land_parts_status')->default(true);
+            $table->boolean('land_parts_status')->default(true);
             $table->unsignedinteger('land_parts_land_id');
 
             $table->timestamps();

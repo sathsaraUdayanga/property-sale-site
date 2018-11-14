@@ -27,7 +27,7 @@ class CreateLandsTable extends Migration
             $table->timestamps();
 
             $table->foreign('land_province_id')->references('province_id')->on('provinces');
-            $table->foreign('land_district_id')->references('district_id')->on('districks');
+            $table->foreign('land_district_id')->references('district_id')->on('districts');
             $table->foreign('land_city_id')->references('city_id')->on('cities');
 
         });
