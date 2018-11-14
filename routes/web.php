@@ -40,3 +40,17 @@ Route::resource('posts', 'PostsController');
 Route::get('/home', function () {
     return view('pages.home');
 });
+
+
+Route::resource('provinces','ProvincesController');
+
+Route::resource('districts','DistrictsController');
+
+Route::resource('cities','CitiesController');
+
+Route::resource('lands','LandsController');
+
+Route::resource('landParts','landPartsController');
+
+Route::resource('users','UsersController');
+
